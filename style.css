@@ -1,0 +1,256 @@
+body{
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: #a5afb3; */
+}
+
+/* home.php */
+.top{
+    background-color: #333;         
+    color: #fff;                               
+    padding: 10px 0; 
+    text-shadow: 7px 7px 7px black;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.hijo1, .hijo2, .hijo3 {
+    flex-grow: 1; /* Hace que todos los hijos crezcan igualmente */
+    flex-basis: 0; /* Establece la medida inicial de largo igual para todos los hijos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    font-size: small;
+}
+
+.hijo3{
+    justify-content: flex-end;
+    padding-right: 1rem;
+}
+
+.hijo1{
+    justify-content: start;
+    padding-left: 1rem;
+}
+
+.boton-cerrar-sesion{
+    border-radius: 3px;
+    color: black; 
+    background-color: white;
+    width: auto;
+    height: auto;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-cerrar-sesion:hover{
+    background-color: #813838;
+}
+
+.boton-cerrar-sesion:active{
+    background: #4a3f85
+}
+
+/* Formulario del home */
+
+.forms{
+    padding-left: 1rem;
+    justify-content: center;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+    border-color: #4a90e2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.2);
+    outline: none;
+}
+
+.div-form{
+    flex-wrap: wrap;   
+    border-radius: 4px;
+    margin-right: 5rem;
+}
+
+.div-notas {
+    flex-wrap: wrap;
+    border-radius: 4px;
+    padding-right: 2rem;
+}
+
+.texto-form{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 1%;
+}
+
+.enviar{
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    border-radius: 4px;
+    justify-content: center;
+}
+
+.send-button,.button{
+    border-radius: 5px;
+    color: black; 
+    background-color: white;
+    width:  25%;
+    height: auto;
+    font-weight: bold;
+    border: .1px .1px black;
+    cursor: pointer;   
+}
+
+.div-button{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.send-button:hover{
+    background: #813838;
+}
+
+
+    /* footer */
+.bottom{
+    background-color: #333;
+    position: absolute;
+    /* bottom: 0; */
+    width: 100%;    
+    color: white;   
+}   
+
+.div-footer{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+
+/* index.php (login) */
+
+.container-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    color: #fff; 
+    text-align: center;
+} 
+
+.login-box h2 {
+    margin: 0 0 1.8rem;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: .9rem 0;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    border: none;
+    border-bottom: 0.0625rem solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 0.625rem 0;
+    font-size: 1rem;
+    color: #fff;
+    pointer-events: none;
+    transition: .7s;
+}
+
+    /* boton login */
+.signin-botton{
+    outline: none; 
+    border: none;
+    cursor: pointer;
+    width: 90%;
+    height: 2.5rem;
+    border-radius: 20px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #ffffff;
+    text-align:center;
+    background: #868e91;
+    box-shadow: 3px 3px 8px #b1b1b16e, -3px -3px 8px #ffffff;
+    transition: 0.5s;
+}
+
+.signin-botton:hover{
+    background: #813838;
+}
+.signin-botton:active{
+    background: #4a3f85;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+    top: -1.25rem;
+    left: 0;
+    color: #813838;
+    font-size: 0.75rem;
+}
+
+/* Pagina resultados */
+
+.div-resultados{
+    justify-content: center;
+    display: flex;
+    margin-top: 7%;
+    color: white;
+}
+.div-resultados-texto{
+    flex-wrap: wrap;
+    width: 30%;
+    border-radius: 6px;
+    background-color: #333;
+    text-align: center;
+    padding: 2%;
+}
